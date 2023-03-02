@@ -1,0 +1,378 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+@font-face {
+    font-family:Lato;
+    src: url(../fonts/sans-serif/lato-regular.ttf);
+    font-style:normal;
+    font-weight:normal;
+}
+@font-face {
+
+    font-family:Alfa Slab One;
+    src: url(../fonts/serif/);
+    font-style: normal;
+    font-weight:normal;
+}
+
+@font-face {
+
+    font-family:'lato';
+    src: url(../fonts/sans-serif/roboto-regular.ttf);
+    font-style: normal;
+    font-weight:normal;
+   
+}
+
+/* typography*/
+
+p {
+    font-family: roboto, arial,sans-serif;
+}
+
+
+.highlight {
+    display: inline-block;
+    font-family: ultra, georgia, serif;
+    border: 1px solid black;
+    padding: 1rem 2rem; 
+    border-radius: .3rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color: #F2E4C9;
+    background-color: rgb(74, 5, 18);
+    box-shadow: 5px 5px 4px -1px #888;
+
+
+}
+
+h1, h2, h3, h4 {
+    font-family: lato, Arial, Helvetica, sans-serif;
+    letter-spacing: 0.25rem;
+}
+
+h1{
+    font-size: 3rem;
+    letter-spacing: .25rem;
+    transform: rotate(-5deg);
+}
+
+/* Root */
+
+html {
+    font-size:16px;
+}
+
+
+/* Body & Main  */
+
+.subsection{
+    display: flex; 
+    
+}
+
+
+
+body {
+    font-family:serif, sans-serif;
+    font-size:1rem;
+    padding:1rem;
+    
+}
+
+header {
+    padding: 1rem;
+}
+
+nav {
+    margin-top: 3rem;
+}
+.main-section {
+    display: grid; 
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 1rem;
+    
+   
+    
+}
+
+article{
+    grid-column: 1/2;
+    grid-row: 1;
+
+}
+
+aside {
+
+    grid-column: 2/3;
+    grid-row: 1;
+    border-left: 1px solid #28234b;
+    padding-left: 0.50rem;
+  
+}
+
+aside p {
+    border-bottom: 1px;
+    padding-bottom: 0.25rem;
+
+} 
+
+aside>p {
+
+    border-bottom: 1px solid black;
+}
+
+
+
+/* link styling */ 
+
+a{
+    outline: none;
+}
+
+a:link,a:visited {
+    color: #a9c134;
+}
+
+nav a:focus, nav a:hover{
+    color: #fff;
+    background-color: #33658A;
+
+}
+
+nav a:active{
+    color: #fff;
+    background-color: #000;
+
+}
+
+/* Headings  */
+
+h1 {
+    text-transform: uppercase;
+    font-size:2.5rem;
+    margin: 0;
+    letter-spacing: .5rem;
+    color: black;
+    text-shadow:.09375rem .09375rem .09375rem #000;
+    font-family: sans-serif, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    text-align:center;
+    margin-top: 4rem;
+   
+}
+
+h2{
+    text-transform: uppercase;
+    color:black;
+    text-shadow:.09375rem .09375rem .09375rem #000;
+    font-family:'Alfa Slab One', Garamond, serif;
+    text-align:left;
+    font-size: 2rem;
+    letter-spacing: spacing 0.025rem;
+    font-weight: normal;
+    margin-top: 4rem;
+}
+
+h3{
+    text-transform: uppercase;
+    color:black;
+    text-shadow:.09375rem .09375rem .09375rem #000;
+    font-family:'Alfa Slab One', Garamond, serif;
+    text-align:center;
+    font-size: 1rem;
+    font-weight: normal;
+
+}
+
+h4{
+    text-transform: uppercase;
+    color:black;
+    text-shadow:.09375rem .09375rem .09375rem #000;
+    font-family:'Alfa Slab One', Garamond, serif;
+    text-align:center;
+    font-size: 1.5rem;
+    letter-spacing: spacing 0.025rem;
+    padding-bottom: 1.125rem;
+    font-weight: normal;
+}
+
+h5{
+    font-size: 1rem;
+    margin-top: 0.25rem;
+    padding: 0.5rem; 
+    background-color: #333;
+    color: #fff;
+    font-weight: normal;
+    text-align: center;
+}
+
+
+/* Section & Paragraph */
+
+section{
+    margin-top: 0.5rem;
+}
+
+p {
+    margin-top: 1rem auto;
+    padding: 0 1rem;
+    width: 90%;
+    text-align: left;
+}
+
+
+/* navagation menu*/
+
+nav
+{
+    margin-top: 6rem;
+    border-top: 2px solid rgb(207, 56, 56);
+    border-bottom: 2px solid rgb(152, 40, 40);
+    
+}
+
+nav a
+ {
+    display: inline-block;
+padding: 2rem 2rem;
+
+}
+/* Image & Figure */
+
+img {
+    width: 100%;
+
+}
+
+
+
+figure{
+    margin: 0px;
+}
+
+figcaption{
+    padding-top: 0.5rem;
+    text-align: center;
+    color: darkred;
+    
+}
+
+.article-image {
+    width: 33%;
+    float: left;
+    padding-block: 2rem;
+    margin-right: 1rem;
+
+} 
+
+h4>span {
+padding: 0 0.5rem;
+
+}
+.subsection 
+{ margin: 1rem;
+  
+}
+
+.subsection figure 
+{
+    margin: 0rem 0.24rem;
+    background-color: rgb(147, 163, 163);
+
+}
+
+.subsection figure figcaption { 
+    padding: 0.5rem 0.5rem;
+}
+
+/* links and navagation*/
+
+a {
+    text-decoration: none;
+}
+
+nav a {
+    display: inline-block;
+    padding: 1.25rem 2rem; 
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    color: olive;
+   
+}
+
+button {
+    display: inline-block;
+    font-family: ultra, georgia, serif;
+    border: 1px solid black;
+    padding: 1rem 2rem; 
+    border-radius: .3rem;
+    border-top-left-radius: 1rem;
+    margin-top: 1.5rem;
+    border-bottom-right-radius: 1rem;
+    color: #F2E4C9;
+    background-color: rgb(74, 5, 18);
+    
+}
+
+
+
+
+
+
+
+/* Footer */
+
+footer {
+    padding: 1rem;
+    margin-top: 1.5rem;
+    border-top: 2rem solid #333;
+    text-align: left 
+}
+
